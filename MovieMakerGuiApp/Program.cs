@@ -14,9 +14,11 @@ namespace MovieMakerGuiApp
         [STAThread]
         static void Main()
         {
+            TicketManager tm = new TicketManager();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeForm());
+            Application.Run(new HomeForm(tm));
         }
     }
 }

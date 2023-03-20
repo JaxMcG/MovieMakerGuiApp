@@ -37,11 +37,11 @@ namespace MovieMakerGuiApp
             this.nudAge = new System.Windows.Forms.NumericUpDown();
             this.rbnPaymentCash = new System.Windows.Forms.RadioButton();
             this.lblNumberofTickets = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nudNoTickets = new System.Windows.Forms.NumericUpDown();
             this.rbnPaymentCard = new System.Windows.Forms.RadioButton();
             this.btnSnackBar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudAge)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNoTickets)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAddNewTicketHolder
@@ -132,10 +132,10 @@ namespace MovieMakerGuiApp
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(12, 265);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(157, 20);
-            this.numericUpDown1.TabIndex = 9;
+            this.nudNoTickets.Location = new System.Drawing.Point(12, 265);
+            this.nudNoTickets.Name = "numericUpDown1";
+            this.nudNoTickets.Size = new System.Drawing.Size(157, 20);
+            this.nudNoTickets.TabIndex = 9;
             // 
             // rbnPaymentCard
             // 
@@ -156,6 +156,7 @@ namespace MovieMakerGuiApp
             this.btnSnackBar.TabIndex = 11;
             this.btnSnackBar.Text = "Continue To The Snack Bar";
             this.btnSnackBar.UseVisualStyleBackColor = true;
+            this.btnSnackBar.Click += new System.EventHandler(this.btnSnackBar_Click);
             // 
             // AddTicketHolderForm
             // 
@@ -164,7 +165,7 @@ namespace MovieMakerGuiApp
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSnackBar);
             this.Controls.Add(this.rbnPaymentCard);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nudNoTickets);
             this.Controls.Add(this.lblNumberofTickets);
             this.Controls.Add(this.rbnPaymentCash);
             this.Controls.Add(this.nudAge);
@@ -176,7 +177,7 @@ namespace MovieMakerGuiApp
             this.Name = "AddTicketHolderForm";
             this.Text = "AddTicketHolderForm";
             ((System.ComponentModel.ISupportInitialize)(this.nudAge)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNoTickets)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,7 +193,7 @@ namespace MovieMakerGuiApp
         private System.Windows.Forms.NumericUpDown nudAge;
         private System.Windows.Forms.RadioButton rbnPaymentCash;
         private System.Windows.Forms.Label lblNumberofTickets;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudNoTickets;
         private System.Windows.Forms.RadioButton rbnPaymentCard;
         private System.Windows.Forms.Button btnSnackBar;
     }

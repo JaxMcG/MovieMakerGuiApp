@@ -12,24 +12,28 @@ namespace MovieMakerGuiApp
 {
     public partial class HomeForm : Form
     {
-        public HomeForm()
+        TicketManager tm;
+
+        public HomeForm(TicketManager tm)
         {
+            this.tm = tm;
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnViewSaleStacks_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void btnAddTicketHolder_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            AddTicketHolderForm myNewForm = new AddTicketHolderForm(tm);
+            myNewForm.Closed += (s, args) => this.Close();
+            myNewForm.Show();
+        }
+
+        private void btnViewSaleStats_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SaleStats myNewForm = new SaleStats(tm);
+            myNewForm.Closed += (s, args) => this.Close();
+            myNewForm.Show();
         }
     }
 }

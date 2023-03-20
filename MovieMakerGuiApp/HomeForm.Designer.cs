@@ -71,7 +71,7 @@ namespace MovieMakerGuiApp
             this.btnViewSaleStats.TabIndex = 3;
             this.btnViewSaleStats.Text = "View Sale Stats";
             this.btnViewSaleStats.UseVisualStyleBackColor = true;
-            this.btnViewSaleStats.Click += new System.EventHandler(this.btnViewSaleStacks_Click);
+            this.btnViewSaleStats.Click += new System.EventHandler(this.btnViewSaleStats_Click);
             // 
             // HomeForm
             // 
@@ -84,7 +84,6 @@ namespace MovieMakerGuiApp
             this.Controls.Add(this.label1);
             this.Name = "HomeForm";
             this.Text = "Home";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

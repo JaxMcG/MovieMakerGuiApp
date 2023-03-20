@@ -72,6 +72,8 @@
     <Compile Include="SnackBar.Designer.cs">
       <DependentUpon>SnackBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="TicketHolder.cs" />
+    <Compile Include="TicketManager.cs" />
     <EmbeddedResource Include="AddTicketHolderForm.resx">
       <DependentUpon>AddTicketHolderForm.cs</DependentUpon>
     </EmbeddedResource>

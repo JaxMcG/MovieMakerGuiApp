@@ -12,9 +12,19 @@ namespace MovieMakerGuiApp
 {
     public partial class SnackBar : Form
     {
-        public SnackBar()
+        TicketManager tm;
+        public SnackBar(TicketManager tm)
         {
+            this.tm = tm;
             InitializeComponent();
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomeForm myNewForm = new HomeForm(tm);
+            myNewForm.Closed += (s, args) => this.Close();
+            myNewForm.Show();
         }
     }
 }
