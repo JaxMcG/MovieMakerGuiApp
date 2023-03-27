@@ -17,11 +17,10 @@ namespace MovieMakerGuiApp
         {
             this.tm = tm;
             InitializeComponent();
-        }
 
-        private void SaleStats_Load(object sender, EventArgs e)
-        {
-
+            //Populate Controls With Information
+            lblTotalProfit.Text += tm.CalculateTotalProfit();
+            rbxSaleStats.Text += tm.TotalSnacksOrdered();
         }
 
         private void btnBackHome_Click(object sender, EventArgs e)

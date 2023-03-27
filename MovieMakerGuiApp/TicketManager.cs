@@ -35,6 +35,13 @@ namespace MovieMakerGuiApp
         }
 
 
+        //Return Available Drinks
+        public List<string> GetAvailableDrinks()
+        {
+            return availableDrinks;
+        }
+
+
         //Return Seat Limit
         public int GetSeatLimit()
         {
@@ -232,9 +239,17 @@ namespace MovieMakerGuiApp
         {
             string summary = "----- Total Ordered Snacks -----\n";
 
+            //Make Space Between Item and Quantity Uniform
             for (int snackIndex = 0; snackIndex < availableSnacks.Count; snackIndex++)
             {
-                summary += availableSnacks[snackIndex] + "   \tX\t" + SumItemsSold("snacks")[snackIndex] + "\n";
+                string item = availableSnacks[snackIndex];
+
+                for (int i = 0; i < 20-item.Length; i++)
+                {
+                    item += " ";
+                }
+
+                summary += item + "   \tX\t" + SumItemsSold("snacks")[snackIndex] + "\n";
             }
 
             return summary;
@@ -244,6 +259,12 @@ namespace MovieMakerGuiApp
         public string DisplayTotalProfit()
         {
             return $"Total Profit: ${CalculateTotalProfit()}";
+        }
+
+
+        public string GenerateRecentReciept()
+        {
+            return ticketHolders[ticketHolders.Count - 1].GenerateReceipt(ticketPrice, availableSnacks, snackPrices, availableDrinks, drinkPrices);
         }
 
 

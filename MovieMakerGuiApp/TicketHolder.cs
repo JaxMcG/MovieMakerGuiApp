@@ -234,7 +234,7 @@ namespace MovieMakerGuiApp
         //Returns a String Displaying the Reciept for the Purchased Items
         public string GenerateReceipt(float tPrice, List<string> sList, List<float> sPrices, List<string> dList, List<float> dPrices)
         {
-            string reciept = $"name: {name}\nAge: {age}\nPayment Type: {PaymentType()}\n" +
+            string reciept = $"Name: {name}\nAge: {age}\nPayment Type: {PaymentType()}\n" +
                 $"{TicketSummary(tPrice)}\n{SnackDrinkSummary(sList, sPrices, dList, dPrices)}\n" +
                 $"{SurchargeSummary(sPrices, dPrices, tPrice)}\n\n{TotalPaymentSummary(sPrices, dPrices, tPrice)}";
 

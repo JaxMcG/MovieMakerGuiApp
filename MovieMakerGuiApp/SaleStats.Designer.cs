@@ -83,7 +83,6 @@ namespace MovieMakerGuiApp
             this.Controls.Add(this.lblViewSaleStats);
             this.Name = "SaleStats";
             this.Text = "SaleStats";
-            this.Load += new System.EventHandler(this.SaleStats_Load);
             this.ResumeLayout(false);
 
         }
